@@ -26,8 +26,6 @@
             min-height: 100vh;
             line-height: 1.6;
         }
-
-        /* === HEADER === */
         .page-header {
             text-align: center;
             padding: 50px 20px 30px;
@@ -46,11 +44,7 @@
             max-width: 500px;
             margin: 0 auto;
         }
-
-        /* === CONTAINER === */
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
-
-        /* === STEP 0: IDENTIFICATION === */
         .id-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -69,7 +63,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 15px;
         }
-        .id-grid .full { grid-column: 1 / -1; }
         .field label {
             display: block;
             font-size: 0.85em;
@@ -92,8 +85,6 @@
             outline: none;
             border-color: var(--accent-gold);
         }
-
-        /* === GROUP SELECTOR === */
         .group-selector {
             display: flex;
             gap: 10px;
@@ -119,8 +110,6 @@
         .group-btn[data-group="B"].active, .group-btn[data-group="B"]:hover { background: var(--accent-green); }
         .group-btn[data-group="C"] { border-color: var(--accent-blue); }
         .group-btn[data-group="C"].active, .group-btn[data-group="C"]:hover { background: var(--accent-blue); }
-
-        /* === SECTIONS === */
         .section-block {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -143,11 +132,7 @@
             padding-left: 12px;
             border-left: 3px solid var(--accent-gold);
         }
-
-        /* === QUESTIONS === */
-        .question {
-            margin-bottom: 22px;
-        }
+        .question { margin-bottom: 22px; }
         .question .q-label {
             font-weight: 700;
             margin-bottom: 4px;
@@ -190,8 +175,6 @@
             transition: border-color 0.3s;
         }
         .question textarea.tall { min-height: 110px; }
-
-        /* === TIP BOX === */
         .tip-box {
             background: rgba(232,176,74,0.08);
             border: 1px solid rgba(232,176,74,0.2);
@@ -199,137 +182,109 @@
             padding: 18px 20px;
             margin: 20px 0;
         }
-        .tip-box h4 {
-            color: var(--accent-gold);
-            font-size: 0.95em;
-            margin-bottom: 8px;
-        }
-        .tip-box p, .tip-box li {
-            font-size: 0.9em;
-            color: var(--text-dim);
-            line-height: 1.6;
-        }
+        .tip-box h4 { color: var(--accent-gold); font-size: 0.95em; margin-bottom: 8px; }
+        .tip-box p, .tip-box li { font-size: 0.9em; color: var(--text-dim); line-height: 1.6; }
         .tip-box ul { margin-left: 18px; margin-top: 6px; }
         .tip-box li { margin-bottom: 4px; }
-
-        /* === GROUP-SPECIFIC === */
         .group-specific { display: none; }
         .group-specific.active { display: block; }
-
-        /* === CHECKLIST === */
         .checklist { margin: 15px 0; }
         .check-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 0;
-            cursor: pointer;
-            user-select: none;
+            display: flex; align-items: center; gap: 10px;
+            padding: 8px 0; cursor: pointer; user-select: none;
         }
-        .check-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            accent-color: var(--accent-gold);
-            cursor: pointer;
-        }
+        .check-item input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--accent-gold); cursor: pointer; }
         .check-item span { font-size: 0.95em; }
-        .check-item.checked span {
-            text-decoration: line-through;
-            opacity: 0.5;
-        }
-
-        /* === BUTTONS === */
+        .check-item.checked span { text-decoration: line-through; opacity: 0.5; }
         .actions {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            display: flex; gap: 12px; justify-content: center;
+            flex-wrap: wrap; margin-top: 30px;
         }
         .btn {
-            padding: 14px 28px;
-            border-radius: 30px;
-            border: none;
-            font-family: inherit;
-            font-size: 1em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            padding: 14px 28px; border-radius: 30px; border: none;
+            font-family: inherit; font-size: 1em; font-weight: 700;
+            cursor: pointer; transition: all 0.3s;
+            display: inline-flex; align-items: center; gap: 8px;
         }
         .btn:hover { transform: translateY(-2px); }
         .btn-gold { background: var(--accent-gold); color: var(--bg-deep); }
+        .btn-gold:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
         .btn-outline { background: transparent; border: 2px solid var(--accent-gold); color: var(--accent-gold); }
-
-        /* === FOOTER === */
         .footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--text-dim);
-            font-size: 0.85em;
-            opacity: 0.6;
+            text-align: center; padding: 30px;
+            color: var(--text-dim); font-size: 0.85em; opacity: 0.6;
         }
-
-        /* === PROGRESS === */
         .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: var(--accent-gold);
-            transition: width 0.4s ease;
-            z-index: 100;
-            border-radius: 0 2px 2px 0;
+            position: fixed; top: 0; left: 0; height: 4px;
+            background: var(--accent-gold); transition: width 0.4s ease;
+            z-index: 100; border-radius: 0 2px 2px 0;
         }
-
-        /* === PRINT STYLES === */
-        @media print {
-            body { background: #fff; color: #000; font-size: 11pt; }
-            .page-header { padding: 20px 0; background: none; }
-            .page-header h1 { color: #333; font-size: 1.8em; }
-            .page-header .subtitle { color: #666; }
-            .container { max-width: 100%; padding: 0 20px; }
-            .section-block, .id-card { 
-                background: #fff; border: 1px solid #ddd; 
-                break-inside: avoid; display: block !important;
-                box-shadow: none; margin-bottom: 15px; padding: 20px;
-            }
-            .section-block h2 { color: #333; }
-            .section-block .section-why { color: #666; border-left-color: #999; }
-            .question textarea {
-                background: #fff; border: 1px solid #ccc; color: #000;
-                min-height: 60px !important;
-                -webkit-print-color-adjust: exact;
-            }
-            .tip-box { background: #f5f5f5; border-color: #ddd; page-break-inside: avoid; }
-            .tip-box h4 { color: #333; }
-            .tip-box p, .tip-box li { color: #555; }
-            .q-number { background: #333 !important; color: #fff !important; -webkit-print-color-adjust: exact; }
-            .group-selector, .actions, .progress-bar, .no-print { display: none !important; }
-            .group-btn { display: none; }
-            .group-specific { display: none !important; }
-            .group-specific.active { display: block !important; }
-            .field input, .field select { border: 1px solid #ccc; background: #fff; color: #000; }
-            .print-group-label { display: block !important; font-weight: bold; color: #333; margin-bottom: 10px; }
-            .check-item input[type="checkbox"] { accent-color: #333; }
-            a { color: #333; }
+        .overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(15,14,23,0.95); z-index: 200;
+            justify-content: center; align-items: center;
         }
-        .print-group-label { display: none; }
-
-        /* === RESPONSIVE === */
+        .overlay.show { display: flex; }
+        .overlay-content {
+            text-align: center; padding: 50px;
+            animation: popIn 0.4s ease;
+        }
+        .overlay-content .emoji { font-size: 4em; margin-bottom: 20px; }
+        .overlay-content h2 {
+            font-family: 'DM Serif Display', serif;
+            color: var(--accent-gold); font-size: 2em; margin-bottom: 10px;
+        }
+        .overlay-content p { color: var(--text-dim); font-size: 1.1em; max-width: 400px; }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .field-error textarea, .field-error input {
+            border-color: var(--accent-rose) !important;
+            animation: shake 0.4s ease;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        .error-msg {
+            color: var(--accent-rose); font-size: 0.85em;
+            margin-top: 5px; display: none;
+        }
+        .field-error .error-msg { display: block; }
         @media (max-width: 600px) {
             .page-header h1 { font-size: 1.8em; }
             .id-grid { grid-template-columns: 1fr; }
             .group-selector { flex-direction: column; align-items: center; }
             .actions { flex-direction: column; align-items: center; }
         }
+        @media print {
+            body { background: #fff; color: #000; font-size: 11pt; }
+            .page-header { padding: 20px 0; background: none; }
+            .page-header h1 { color: #333; font-size: 1.8em; }
+            .container { max-width: 100%; padding: 0 20px; }
+            .section-block, .id-card { background: #fff; border: 1px solid #ddd; display: block !important; margin-bottom: 15px; padding: 20px; break-inside: avoid; }
+            .section-block h2 { color: #333; }
+            .question textarea { background: #fff; border: 1px solid #ccc; color: #000; }
+            .q-number { background: #333 !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+            .group-selector, .actions, .progress-bar, .overlay { display: none !important; }
+            .group-specific { display: none !important; }
+            .group-specific.active { display: block !important; }
+            .field input { border: 1px solid #ccc; background: #fff; color: #000; }
+        }
     </style>
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
+
+    <div class="overlay" id="successOverlay">
+        <div class="overlay-content">
+            <div class="emoji">🎉</div>
+            <h2>Respostes enviades!</h2>
+            <p>El profe ja té les vostres respostes. Ara prepareu-vos per fer una gran exposició!</p>
+        </div>
+    </div>
 
     <div class="page-header">
         <h1>🎤 Preparació de l'Exposició</h1>
@@ -337,18 +292,18 @@
     </div>
 
     <div class="container">
-
-        <!-- IDENTIFICACIÓ -->
         <div class="id-card">
             <h2>📋 Qui sou?</h2>
             <div class="id-grid">
                 <div class="field">
                     <label>Nom i cognom (alumne 1)</label>
                     <input type="text" id="nom1" placeholder="Escriu aquí...">
+                    <div class="error-msg">Cal omplir aquest camp</div>
                 </div>
                 <div class="field">
                     <label>Nom i cognom (alumne 2)</label>
                     <input type="text" id="nom2" placeholder="Escriu aquí...">
+                    <div class="error-msg">Cal omplir aquest camp</div>
                 </div>
                 <div class="field">
                     <label>Data</label>
@@ -361,115 +316,109 @@
                         <button class="group-btn" data-group="B" onclick="selectGroup('B')">🟢 Grup B<br><small>La Col·laboradora</small></button>
                         <button class="group-btn" data-group="C" onclick="selectGroup('C')">🔵 Grup C<br><small>L'Arrest</small></button>
                     </div>
+                    <div class="error-msg" id="groupError" style="text-align:center;">Cal triar un grup</div>
                 </div>
             </div>
         </div>
 
-        <!-- ===================== SECCIÓ 1: ENTENDRE ===================== -->
-        <div class="section-block visible" id="sec1">
+        <!-- SECCIÓ 1 -->
+        <div class="section-block visible">
             <h2>1. Entendre el que heu creat</h2>
             <div class="section-why">Per què? Perquè no podeu explicar bé una cosa que no enteneu bé.</div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">1</span> Resumeix en 2-3 frases la part de la història d'Irena que explica el vostre còmic.</div>
                 <div class="q-hint">No expliqueu les vinyetes — expliqueu la HISTÒRIA.</div>
-                <textarea placeholder="La nostra part explica com..."></textarea>
+                <textarea id="P1" placeholder="La nostra part explica com..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">2</span> Per què és important la part de la història que us ha tocat?</div>
                 <div class="q-hint">Què no s'entendria de la història d'Irena sense la vostra part?</div>
-                <textarea placeholder="Sense la nostra part, no s'entendria que..."></textarea>
+                <textarea id="P2" placeholder="Sense la nostra part, no s'entendria que..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
-            <!-- GRUP A SPECIFIC -->
             <div class="group-specific" data-for="A">
                 <div class="question">
                     <div class="q-label"><span class="q-number">3A</span> Irena va treure nens del gueto de maneres molt diferents. Quina us ha impactat més i per què?</div>
                     <div class="q-hint">Dins sacs, caixes d'eines, ambulàncies, amb el gos...</div>
-                    <textarea placeholder="La que més ens ha impactat és..."></textarea>
+                    <textarea class="q3-group" placeholder="La que més ens ha impactat és..."></textarea>
                 </div>
                 <div class="question">
                     <div class="q-label"><span class="q-number">4A</span> Imagineu el moment en què una mare decideix deixar anar el seu fill. Què creieu que sent?</div>
                     <div class="q-hint">Penseu-hi un moment abans d'escriure.</div>
-                    <textarea class="tall" placeholder="Creiem que sent..."></textarea>
+                    <textarea class="tall q4-group" placeholder="Creiem que sent..."></textarea>
                 </div>
             </div>
-
-            <!-- GRUP B SPECIFIC -->
             <div class="group-specific" data-for="B">
                 <div class="question">
                     <div class="q-label"><span class="q-number">3B</span> La xarxa d'Irena incloïa monges, famílies, conductors... Per què creieu que tanta gent diferent va decidir ajudar, sabent que podia morir?</div>
-                    <textarea class="tall" placeholder="Creiem que van ajudar perquè..."></textarea>
+                    <textarea class="tall q3-group" placeholder="Creiem que van ajudar perquè..."></textarea>
                 </div>
                 <div class="question">
                     <div class="q-label"><span class="q-number">4B</span> Les famílies poloneses que amagaven nens jueus arriscaven la vida de tota la família — inclosos els seus propis fills. Què opines d'aquesta decisió?</div>
-                    <textarea class="tall" placeholder="Pensem que..."></textarea>
+                    <textarea class="tall q4-group" placeholder="Pensem que..."></textarea>
                 </div>
             </div>
-
-            <!-- GRUP C SPECIFIC -->
             <div class="group-specific" data-for="C">
                 <div class="question">
                     <div class="q-label"><span class="q-number">3C</span> Irena va ser torturada i no va donar ni un sol nom. D'on creieu que treia la força per callar?</div>
-                    <textarea class="tall" placeholder="Creiem que la seva força venia de..."></textarea>
+                    <textarea class="tall q3-group" placeholder="Creiem que la seva força venia de..."></textarea>
                 </div>
                 <div class="question">
                     <div class="q-label"><span class="q-number">4C</span> Irena va dir: "No vaig fer res especial. Simplement vaig fer el que calia fer." Esteu d'acord que no va fer "res especial"?</div>
-                    <textarea class="tall" placeholder="Nosaltres pensem que..."></textarea>
+                    <textarea class="tall q4-group" placeholder="Nosaltres pensem que..."></textarea>
                 </div>
             </div>
         </div>
 
-        <!-- ===================== SECCIÓ 2: DECISIONS CREATIVES ===================== -->
-        <div class="section-block visible" id="sec2">
+        <!-- SECCIÓ 2 -->
+        <div class="section-block visible">
             <h2>2. Les vostres decisions creatives</h2>
-            <div class="section-why">Per què? Perquè quan expliqueu per què heu triat cada cosa, demostreu que hi heu pensat — i això és el que avalua el profe.</div>
-
+            <div class="section-why">Per què? Perquè quan expliqueu per què heu triat cada cosa, demostreu que hi heu pensat.</div>
             <div class="question">
                 <div class="q-label"><span class="q-number">5</span> Quina vinyeta us ha costat més de fer? Per què?</div>
-                <textarea placeholder="La vinyeta que ens ha costat més és la número... perquè..."></textarea>
+                <textarea id="P5" placeholder="La vinyeta que ens ha costat més és la número... perquè..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">6</span> Quina vinyeta creieu que ha quedat millor? Què la fa especial?</div>
-                <textarea placeholder="La que ens agrada més és... perquè..."></textarea>
+                <textarea id="P6" placeholder="La que ens agrada més és... perquè..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">7</span> Si poguéssiu refer una vinyeta, quina canviaríeu i com?</div>
                 <div class="q-hint">No passa res per dir que alguna cosa no us convenç. Això demostra esperit crític!</div>
-                <textarea placeholder="Canviaríem la vinyeta número... perquè..."></textarea>
+                <textarea id="P7" placeholder="Canviaríem la vinyeta número... perquè..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
         </div>
 
-        <!-- ===================== SECCIÓ 3: CONNEXIÓ PERSONAL ===================== -->
-        <div class="section-block visible" id="sec3">
+        <!-- SECCIÓ 3 -->
+        <div class="section-block visible">
             <h2>3. Connexió amb el vostre món</h2>
             <div class="section-why">Per què? Perquè la història d'Irena no és un relat del passat — és una pregunta per a avui.</div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">8</span> Què és el que més us ha impactat de la història d'Irena Sendler?</div>
-                <textarea placeholder="El que més ens ha impactat és..."></textarea>
+                <textarea id="P8" placeholder="El que més ens ha impactat és..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">9</span> Irena tenia 30 anys quan va començar. Vosaltres en teniu 13-14. Creieu que algú de la vostra edat podria fer alguna cosa pels altres? Poseu un exemple concret.</div>
                 <div class="q-hint">No cal salvar 2.500 vides. Penseu en el vostre entorn real.</div>
-                <textarea class="tall" placeholder="Sí/no, perquè... Per exemple..."></textarea>
+                <textarea class="tall" id="P9" placeholder="Sí/no, perquè... Per exemple..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">10</span> Completeu la frase: "Després de conèixer la història d'Irena, nosaltres..."</div>
-                <textarea placeholder="Després de conèixer la història d'Irena, nosaltres..."></textarea>
+                <textarea id="P10" placeholder="Després de conèixer la història d'Irena, nosaltres..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
         </div>
 
-        <!-- ===================== SECCIÓ 4: PREPARAR L'EXPOSICIÓ ===================== -->
-        <div class="section-block visible" id="sec4">
+        <!-- SECCIÓ 4 -->
+        <div class="section-block visible">
             <h2>4. Preparar l'exposició</h2>
-            <div class="section-why">Per què? Perquè una bona exposició no s'improvisa — es prepara. I el que aprengueu aquí us servirà SEMPRE.</div>
-
+            <div class="section-why">Per què? Perquè una bona exposició no s'improvisa — es prepara.</div>
             <div class="tip-box">
                 <h4>💡 Les 4 claus d'una bona exposició</h4>
                 <ul>
@@ -479,143 +428,173 @@
                     <li><strong>Veu:</strong> Parleu fort, clar i sense córrer. Si esteu nerviosos, respireu i aneu a poc a poc.</li>
                 </ul>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">11</span> Com començareu l'exposició? Escriviu la primera frase que direu.</div>
-                <div class="q-hint">Un bon inici enganxa. Exemples: "Imagineu-vos que..." / "Sabíeu que una dona sola va salvar..." / "La nostra part de la història comença quan..."</div>
-                <textarea placeholder="Començarem dient..."></textarea>
+                <div class="q-hint">Un bon inici enganxa. Exemples: "Imagineu-vos que..." / "Sabíeu que una dona sola va salvar..."</div>
+                <textarea id="P11" placeholder="Començarem dient..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">12</span> Repartiment: Qui explica cada vinyeta?</div>
                 <div class="q-hint">Alterneu-vos per mantenir el ritme.</div>
-                <textarea placeholder="Vinyeta 1: [nom]&#10;Vinyeta 2: [nom]&#10;Vinyeta 3: [nom]&#10;Vinyeta 4: [nom]&#10;Vinyeta 5: [nom]&#10;Vinyeta 6: [nom]" class="tall"></textarea>
+                <textarea id="P12" placeholder="Vinyeta 1: [nom]&#10;Vinyeta 2: [nom]&#10;Vinyeta 3: [nom]&#10;Vinyeta 4: [nom]&#10;Vinyeta 5: [nom]&#10;Vinyeta 6: [nom]" class="tall"></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
-
             <div class="question">
                 <div class="q-label"><span class="q-number">13</span> Com acabareu? Escriviu la frase final de la vostra exposició.</div>
                 <div class="q-hint">Un bon final queda al cap. Pot ser una reflexió, una pregunta a la classe, o la frase d'Irena.</div>
-                <textarea placeholder="Acabarem dient..."></textarea>
+                <textarea id="P13" placeholder="Acabarem dient..."></textarea>
+                <div class="error-msg">Cal respondre aquesta pregunta</div>
             </div>
         </div>
 
-        <!-- ===================== SECCIÓ 5: CHECKLIST ===================== -->
-        <div class="section-block visible" id="sec5">
+        <!-- SECCIÓ 5 -->
+        <div class="section-block visible">
             <h2>5. Checklist final</h2>
-            <div class="section-why">Abans de l'exposició, comproveu que ho teniu tot a punt.</div>
-
+            <div class="section-why">Abans d'enviar, comproveu que ho teniu tot a punt.</div>
             <div class="checklist">
-                <label class="check-item" onclick="toggleCheck(this)">
-                    <input type="checkbox"> <span>Hem llegit les preguntes i les hem respost totes</span>
-                </label>
-                <label class="check-item" onclick="toggleCheck(this)">
-                    <input type="checkbox"> <span>Sabem qui explica cada vinyeta</span>
-                </label>
-                <label class="check-item" onclick="toggleCheck(this)">
-                    <input type="checkbox"> <span>Tenim la primera frase preparada</span>
-                </label>
-                <label class="check-item" onclick="toggleCheck(this)">
-                    <input type="checkbox"> <span>Tenim la frase final preparada</span>
-                </label>
-                <label class="check-item" onclick="toggleCheck(this)">
-                    <input type="checkbox"> <span>Hem practicat almenys una vegada en veu alta</span>
-                </label>
-                <label class="check-item" onclick="toggleCheck(this)">
-                    <input type="checkbox"> <span>El nostre còmic està acabat a Google Slides</span>
-                </label>
-                <label class="check-item" onclick="toggleCheck(this)">
-                    <input type="checkbox"> <span>Estem preparats!</span>
-                </label>
+                <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox"> <span>Hem respost totes les preguntes</span></label>
+                <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox"> <span>Sabem qui explica cada vinyeta</span></label>
+                <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox"> <span>Tenim la primera frase preparada</span></label>
+                <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox"> <span>Tenim la frase final preparada</span></label>
+                <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox"> <span>Hem practicat almenys una vegada en veu alta</span></label>
+                <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox"> <span>El nostre còmic està acabat a Google Slides</span></label>
+                <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox"> <span>Estem preparats!</span></label>
             </div>
         </div>
 
-        <!-- ACTIONS -->
-        <div class="actions no-print">
-            <button class="btn btn-gold" onclick="printDoc()">🖨️ Imprimir / Desar com a PDF</button>
-            <button class="btn btn-outline" onclick="copyAll()">📋 Copiar tot el text</button>
+        <div class="actions">
+            <button class="btn btn-gold" id="submitBtn" onclick="submitToGoogle()">📤 Enviar respostes al profe</button>
+            <button class="btn btn-outline" onclick="window.print()">🖨️ Imprimir</button>
         </div>
 
         <div class="footer">SHALOM 2.0 · Constructors de Pau al Segle XXI · INS Flix</div>
     </div>
 
     <script>
-        // Set today's date
         document.getElementById('data').valueAsDate = new Date();
 
-        // Group selection
+        const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSf_jMPoT01yyS1JQF1VY7T1e-hh3GhFtX-55-ltKoHI72SLAw/formResponse';
+        const ENTRIES = {
+            NOM1: 'entry.916021460',
+            NOM2: 'entry.275216252',
+            GRUP: 'entry.1637825914',
+            DATA: 'entry.1260435079',
+            P1:   'entry.450800451',
+            P2:   'entry.1722328424',
+            P3:   'entry.1082552199',
+            P4:   'entry.1275491288',
+            P5:   'entry.1819046371',
+            P6:   'entry.558693130',
+            P7:   'entry.1652980948',
+            P8:   'entry.811479848',
+            P9:   'entry.1688038044',
+            P10:  'entry.1881756525',
+            P11:  'entry.749524281',
+            P12:  'entry.570565293',
+            P13:  'entry.1942246443'
+        };
+
         let selectedGroup = null;
+
         function selectGroup(g) {
             selectedGroup = g;
             document.querySelectorAll('.group-btn').forEach(b => b.classList.remove('active'));
-            document.querySelector(`.group-btn[data-group="${g}"]`).classList.add('active');
+            document.querySelector('.group-btn[data-group="'+g+'"]').classList.add('active');
             document.querySelectorAll('.group-specific').forEach(el => {
                 el.classList.toggle('active', el.dataset.for === g);
             });
+            document.getElementById('groupError').style.display = 'none';
             updateProgress();
         }
 
-        // Checklist
         function toggleCheck(el) {
             el.classList.toggle('checked', el.querySelector('input').checked);
-            updateProgress();
         }
 
-        // Progress bar
         function updateProgress() {
-            const textareas = document.querySelectorAll('textarea');
-            let filled = 0;
-            let visible = 0;
-            textareas.forEach(ta => {
-                const section = ta.closest('.group-specific');
-                if (section && !section.classList.contains('active')) return;
+            const tas = document.querySelectorAll('textarea');
+            let filled = 0, visible = 0;
+            tas.forEach(ta => {
+                const gs = ta.closest('.group-specific');
+                if (gs && !gs.classList.contains('active')) return;
                 visible++;
                 if (ta.value.trim().length > 5) filled++;
             });
-            const pct = visible > 0 ? (filled / visible) * 100 : 0;
-            document.getElementById('progressBar').style.width = pct + '%';
+            document.getElementById('progressBar').style.width = (visible > 0 ? (filled/visible)*100 : 0) + '%';
         }
         document.addEventListener('input', updateProgress);
 
-        // Print
-        function printDoc() {
-            window.print();
+        function getGroupAnswer(cls) {
+            const ag = document.querySelector('.group-specific.active');
+            if (!ag) return '';
+            const ta = ag.querySelector('.' + cls);
+            return ta ? ta.value.trim() : '';
         }
 
-        // Copy all text
-        function copyAll() {
-            const nom1 = document.getElementById('nom1').value || '—';
-            const nom2 = document.getElementById('nom2').value || '—';
-            const data = document.getElementById('data').value || '—';
-            const grup = selectedGroup ? `Grup ${selectedGroup}` : '—';
+        function validate() {
+            let valid = true;
+            document.querySelectorAll('.field-error').forEach(el => el.classList.remove('field-error'));
 
-            let text = `PREPARACIÓ EXPOSICIÓ - CÒMIC D'IRENA SENDLER\n`;
-            text += `=============================================\n`;
-            text += `Alumnes: ${nom1} i ${nom2}\n`;
-            text += `Grup: ${grup}\nData: ${data}\n\n`;
-
-            const questions = document.querySelectorAll('.question');
-            questions.forEach(q => {
-                const gs = q.closest('.group-specific');
-                if (gs && !gs.classList.contains('active')) return;
-
-                const label = q.querySelector('.q-label')?.textContent?.trim() || '';
-                const answer = q.querySelector('textarea')?.value?.trim() || '(sense resposta)';
-                text += `${label}\n→ ${answer}\n\n`;
+            if (!document.getElementById('nom1').value.trim()) {
+                document.getElementById('nom1').closest('.field').classList.add('field-error'); valid = false;
+            }
+            if (!document.getElementById('nom2').value.trim()) {
+                document.getElementById('nom2').closest('.field').classList.add('field-error'); valid = false;
+            }
+            if (!selectedGroup) {
+                document.getElementById('groupError').style.display = 'block'; valid = false;
+            }
+            ['P1','P2','P5','P6','P7','P8','P9','P10','P11','P12','P13'].forEach(id => {
+                const ta = document.getElementById(id);
+                if (ta && !ta.value.trim()) {
+                    ta.closest('.question').classList.add('field-error'); valid = false;
+                }
             });
+            if (!valid) {
+                const fe = document.querySelector('.field-error');
+                if (fe) fe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return valid;
+        }
 
-            const checks = document.querySelectorAll('.check-item');
-            text += `CHECKLIST:\n`;
-            checks.forEach(c => {
-                const checked = c.querySelector('input').checked ? '✅' : '⬜';
-                const label = c.querySelector('span').textContent;
-                text += `${checked} ${label}\n`;
-            });
+        function submitToGoogle() {
+            if (!validate()) return;
 
-            navigator.clipboard.writeText(text).then(() => {
-                const btn = document.querySelector('.btn-outline');
-                const original = btn.innerHTML;
-                btn.innerHTML = '✅ Copiat!';
-                setTimeout(() => btn.innerHTML = original, 2000);
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Enviant...';
+
+            const fd = new URLSearchParams();
+            fd.append(ENTRIES.NOM1, document.getElementById('nom1').value.trim());
+            fd.append(ENTRIES.NOM2, document.getElementById('nom2').value.trim());
+            fd.append(ENTRIES.GRUP, 'Grup ' + selectedGroup);
+            fd.append(ENTRIES.DATA, document.getElementById('data').value);
+            fd.append(ENTRIES.P1,  document.getElementById('P1').value.trim());
+            fd.append(ENTRIES.P2,  document.getElementById('P2').value.trim());
+            fd.append(ENTRIES.P3,  getGroupAnswer('q3-group'));
+            fd.append(ENTRIES.P4,  getGroupAnswer('q4-group'));
+            fd.append(ENTRIES.P5,  document.getElementById('P5').value.trim());
+            fd.append(ENTRIES.P6,  document.getElementById('P6').value.trim());
+            fd.append(ENTRIES.P7,  document.getElementById('P7').value.trim());
+            fd.append(ENTRIES.P8,  document.getElementById('P8').value.trim());
+            fd.append(ENTRIES.P9,  document.getElementById('P9').value.trim());
+            fd.append(ENTRIES.P10, document.getElementById('P10').value.trim());
+            fd.append(ENTRIES.P11, document.getElementById('P11').value.trim());
+            fd.append(ENTRIES.P12, document.getElementById('P12').value.trim());
+            fd.append(ENTRIES.P13, document.getElementById('P13').value.trim());
+
+            fetch(FORM_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: fd.toString()
+            }).then(() => {
+                document.getElementById('successOverlay').classList.add('show');
+                btn.innerHTML = '✅ Enviat!';
+            }).catch(() => {
+                document.getElementById('successOverlay').classList.add('show');
+                btn.innerHTML = '✅ Enviat!';
             });
         }
     </script>
