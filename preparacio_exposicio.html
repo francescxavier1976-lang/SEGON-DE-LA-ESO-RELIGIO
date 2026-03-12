@@ -565,38 +565,49 @@
             btn.disabled = true;
             btn.innerHTML = '⏳ Enviant...';
 
-            const fd = new URLSearchParams();
-            fd.append(ENTRIES.NOM1, document.getElementById('nom1').value.trim());
-            fd.append(ENTRIES.NOM2, document.getElementById('nom2').value.trim());
-            fd.append(ENTRIES.GRUP, 'Grup ' + selectedGroup);
-            fd.append(ENTRIES.DATA, document.getElementById('data').value);
-            fd.append(ENTRIES.P1,  document.getElementById('P1').value.trim());
-            fd.append(ENTRIES.P2,  document.getElementById('P2').value.trim());
-            fd.append(ENTRIES.P3,  getGroupAnswer('q3-group'));
-            fd.append(ENTRIES.P4,  getGroupAnswer('q4-group'));
-            fd.append(ENTRIES.P5,  document.getElementById('P5').value.trim());
-            fd.append(ENTRIES.P6,  document.getElementById('P6').value.trim());
-            fd.append(ENTRIES.P7,  document.getElementById('P7').value.trim());
-            fd.append(ENTRIES.P8,  document.getElementById('P8').value.trim());
-            fd.append(ENTRIES.P9,  document.getElementById('P9').value.trim());
-            fd.append(ENTRIES.P10, document.getElementById('P10').value.trim());
-            fd.append(ENTRIES.P11, document.getElementById('P11').value.trim());
-            fd.append(ENTRIES.P12, document.getElementById('P12').value.trim());
-            fd.append(ENTRIES.P13, document.getElementById('P13').value.trim());
+            const vals = {
+                NOM1: document.getElementById('nom1').value.trim(),
+                NOM2: document.getElementById('nom2').value.trim(),
+                GRUP: 'Grup ' + selectedGroup,
+                DATA: document.getElementById('data').value,
+                P1:   document.getElementById('P1').value.trim(),
+                P2:   document.getElementById('P2').value.trim(),
+                P3:   getGroupAnswer('q3-group'),
+                P4:   getGroupAnswer('q4-group'),
+                P5:   document.getElementById('P5').value.trim(),
+                P6:   document.getElementById('P6').value.trim(),
+                P7:   document.getElementById('P7').value.trim(),
+                P8:   document.getElementById('P8').value.trim(),
+                P9:   document.getElementById('P9').value.trim(),
+                P10:  document.getElementById('P10').value.trim(),
+                P11:  document.getElementById('P11').value.trim(),
+                P12:  document.getElementById('P12').value.trim(),
+                P13:  document.getElementById('P13').value.trim(),
+            };
 
-            fetch(FORM_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: fd.toString()
-            }).then(() => {
-                document.getElementById('successOverlay').classList.add('show');
-                btn.innerHTML = '✅ Enviat!';
-            }).catch(() => {
-                document.getElementById('successOverlay').classList.add('show');
-                btn.innerHTML = '✅ Enviat!';
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = FORM_URL;
+            form.target = 'gft';
+
+            Object.entries(ENTRIES).forEach(([k, entry]) => {
+                const inp = document.createElement('input');
+                inp.type = 'hidden';
+                inp.name = entry;
+                inp.value = vals[k] || '';
+                form.appendChild(inp);
             });
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+
+            setTimeout(() => {
+                document.getElementById('successOverlay').classList.add('show');
+                btn.innerHTML = '✅ Enviat!';
+            }, 800);
         }
     </script>
+    <iframe name="gft" style="display:none;" aria-hidden="true"></iframe>
 </body>
 </html>
